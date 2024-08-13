@@ -23,7 +23,9 @@ jobs:
       run: ls -R
 
     - name: Install dependencies
-      run: npm install
+      run: 
+        cd ./PART-3/Exercise-3.1/express-app
+        npm install
 
     - name: Build the app
       run: npm run build

@@ -18,14 +18,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '16'
-
-    - name: List directory contents
-      run: ls -R
+        cache: npm
 
     - name: Install dependencies
-      run: 
-        cd ./PART-3/Exercise-3.1/express-app
-        npm install
+      run: npm ci
 
     - name: Build the app
       run: npm run build
